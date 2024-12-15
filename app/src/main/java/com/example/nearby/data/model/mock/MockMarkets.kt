@@ -11,6 +11,7 @@ val mockMarkets = listOf(
         latitude = -23.55974230991911,
         longitude = -46.65814845249887,
         coupons = 10,
+//        rules = mockRules,
         address = "Av. Paulista - Bela Vista",
         phone = "(11) 94567-1212",
         cover = "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=400&h=300",
