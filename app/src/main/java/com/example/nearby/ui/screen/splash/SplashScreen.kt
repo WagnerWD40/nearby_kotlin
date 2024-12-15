@@ -1,7 +1,5 @@
-package com.example.nearby.ui.screen
+package com.example.nearby.ui.screen.splash
 
-import android.graphics.Paint
-import android.window.SplashScreen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

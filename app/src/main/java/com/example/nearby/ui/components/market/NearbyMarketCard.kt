@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil3.compose.AsyncImage
 import com.example.nearby.data.model.Market
 import com.example.nearby.ui.theme.Gray100
 import com.example.nearby.ui.theme.Gray200
@@ -35,6 +36,7 @@ import com.example.nearby.ui.theme.Gray400
 import com.example.nearby.ui.theme.Gray500
 import com.example.nearby.ui.theme.RedBase
 import com.example.nearby.ui.theme.Typography
+import org.jetbrains.annotations.Async
 
 @Composable
 fun NearbyMarketCard(
@@ -59,14 +61,26 @@ fun NearbyMarketCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Image(
+            // Mock
+            //
+//            Image(
+//                modifier = Modifier
+//                    .clip(RoundedCornerShape(12.dp))
+//                    .fillMaxWidth(0.3f)
+//                    .height(IntrinsicSize.Min)
+//                    .aspectRatio(ratio = 1f, matchHeightConstraintsFirst = true),
+//                contentScale = ContentScale.Crop,
+//                painter = painterResource(R.drawable.img_sushi), // TODO: Mudar pro que vem da api depois
+//                contentDescription = "Imagem da Estabelecimento"
+//            )
+            AsyncImage(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
                     .fillMaxWidth(0.3f)
                     .height(IntrinsicSize.Min)
                     .aspectRatio(ratio = 1f, matchHeightConstraintsFirst = true),
                 contentScale = ContentScale.Crop,
-                painter = painterResource(R.drawable.img_sushi), // TODO: Mudar pro que vem da api depois
+                model = market.cover,
                 contentDescription = "Imagem da Estabelecimento"
             )
             Column {
